@@ -9,8 +9,8 @@
 </head>
 <body>
     <?php 
-    $nasceu = $_GET['age'] ?? 1985;
-    $ano = $_GET['agef'] ?? $anoAtual;
+    $nasceu = $_GET['age'] ?? 1999;
+    $ano = $_GET['agef'] ?? 2023;
     $anoAtual = date("Y");
     $idade = $ano - $nasceu;
     ?>
