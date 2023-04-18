@@ -8,6 +8,16 @@
     <title>Caixa Eletônico</title>
 </head>
 <body>
-    
+    <main>
+        <h1>Caixa Eletrônico</h1>
+        <form action="" method="get">
+            <label for="din">Qual valor você deseja sacar ?(R$)*</label>
+            <input type="number" name="din" id="din">
+            <input type="submit" value="Sacar">
+        </form>
+    </main>
+    <section>
+        <h2>Saque de realizado</h2>
+    </section>
 </body>
 </html>
