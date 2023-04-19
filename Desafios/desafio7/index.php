@@ -8,16 +8,27 @@
     <title>Salário Mínimo</title>
 </head>
 <body>
+    <?php 
+        $minimo = 1_380.60;
+        $salario = $_GET['sl'] ?? $minimo;
+    ?>
     <main>
         <h1>Informe seu salário</h1>
-        <form action="" method="get">
-            <label for="sl">Salário(R$)</label>
-            <input type="number" name="sl" id="sl">
+        <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
+            <label for="sl">Salário (R$)</label>
+            <input type="number" name="sl" id="sl" value="<?=$salario?>" step="0.01">
+            <p>Considerando o sálario mínimo de <strong>R$<?=number_format($minimo, 2, ",", ".")?></strong></p>
             <input type="submit" value="Calcular">
         </form>
     </main>
     <section>
         <h2>Resultado Final</h2>
+        <?php 
+            $tot = intdiv($salario, $minimo);
+            $dif = $salario % $minimo;
+
+            echo "<p>Quem recebe um salário de R\$". number_format($salario, 2, ",", ".")." ganha <strong>$tot salários mínimos</strong> + R$ ". number_format($dif, 2, ",", "."). ".</p>";
+        ?>
     </section>
 </body>
 </html>
