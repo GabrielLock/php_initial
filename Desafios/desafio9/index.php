@@ -16,7 +16,7 @@
     ?>
     <main>
         <h1>Médias Aritméticas</h1>
-        <form action="" method="get">
+        <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
             <label for="v1">1° Valor</label>
             <input type="number" name="v1" id="v1">
             <label for="p1">1° Peso</label>

@@ -14,7 +14,7 @@
     ?>
     <main>
         <h1>Informe um número</h1>
-        <form action="" method="get">
+        <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
             <label for="num">Número</label>
             <input type="number" name="num" id="num" min="2" value="<?=$numero?>">
             <input type="submit" value="Calcular Raízes">
